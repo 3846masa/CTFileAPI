@@ -6,6 +6,7 @@ sourceMapSupport();
 
 import path from 'path';
 import fs from 'fs';
+import url from 'url';
 import config from 'config';
 import projectRoot from 'app-root-path';
 import { sha3_512 } from 'js-sha3';
@@ -32,7 +33,8 @@ let twitterStrategy = new TwitterStrategy(
   {
     consumerKey: process.env['TWITTER_CONSUMER_KEY'] || config.get('TWITTER_CONSUMER_KEY'),
     consumerSecret: process.env['TWITTER_CONSUMER_SECRET'] || config.get('TWITTER_CONSUMER_SECRET'),
-    callbackURL: 'http://localhost:3000/auth/twitter/callback'
+    callbackURL:
+      url.resolve(process.env['ROOT_URL'] || config.get('ROOT_URL'), 'auth/twitter/callback')
   },
   (token, tokenSecret, profile, done) => {
     done(null, profile);
