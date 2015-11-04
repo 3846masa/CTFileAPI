@@ -5,6 +5,7 @@
   "main": "lib/main.js",
   "scripts": {
     "start": "node lib/main.js",
+    "build": "babel src -d lib -s inline",
     "watch": "babel src -d lib -w -s inline",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -36,3 +36,6 @@ config
 # Static Files
 static
 *.sqlite
+
+# Generated Files
+lib

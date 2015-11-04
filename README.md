@@ -3,6 +3,7 @@ File-based CTF-Question Serving API.
 
 ## How to use
 - Clone project.
+- ``npm install && npm run build``
 - Create ``static`` folder in project root.
 - Put questions folloing below.
   - ``questionList.json`` is JSON Array of folders.
