@@ -1,4 +1,6 @@
 # CTFileAPI
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/3846masa/CTFileAPI_Old.svg)](https://greenkeeper.io/)
 File-based CTF-Question Serving API.
 
 ## How to use
